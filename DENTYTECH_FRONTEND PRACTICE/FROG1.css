@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: gilroy; */
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+}
+#nav-part1{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 4px;
+}
+
+#nav h3{
+    font-size: 16px;
+    border:1.5px solid #000;
+    padding: 5px 10px;
+    border-radius:50px;
+    font-weight: 500;
+}
+
+#nav i{
+    font-size: 16px;
+    border:1.5px solid #000;
+    padding: 5px 10px;
+    border-radius:50px;
+    font-weight: 500;
+}
+
+/* designing dentytech h1 */
+#nav h1{
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+
+/* designing the buttons- log in and sign up */
+#nav button{
+    padding: 7px 12px; /* button
+    ke andar top and bottom aur text ke beech 7px and left amd right pf text 12 px*/
+    font-size: 16px;
+    border-radius: 50px;
+    border:1.5px solid #000;
+    font-weight: 600;
+}
+
+/* designing the  sign up button */
+#btn2{
+    background-color: orangered;
+    color: #fff;
+    border: none;
+}
+
+.pnchline{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 120px; /*our advantages is coming in two lines*/
+    width: 100%; /*thus i gave it the width of 100% in order to make it in a single line/*/
+    text-align: center;
+
+}
+/*  there are two waysof targetting this h1 the first one is  */
+/* already done another way is to use  > i.e this h1 is the direct child of  */
+/* main div thus the code will be main>h1 */
+
+img{
+    height: 350px;
+    width: 250px;
+    object-fit: cover; 
+    /*used for fitting the img inside the given proportion or can say when img tag
+     is used*/
+    /* there is one more property named backgrounf-size: cover; used when 
+    img is set o the background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+#img1{
+    transform: translate(-50%, -50%) rotate(-30deg);
+
+    /* rotate bhi ek property of transform
+     and if we write rotate directly 
+     then it will overwrite transform creating not a good
+     effect thust we will use rotate inside transform */
+
+}
+
+#img2{
+    transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+#img3{
+    transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+#btm-left{
+    position:absolute;
+    bottom: 5%;
+    left:3%;
+    font-size: 20px;
+}
