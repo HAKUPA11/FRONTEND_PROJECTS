@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: gilroy; */
+    font-family: 'Poppins', sans-serif;
 }
 html, body{
     height: 100%;
@@ -14,19 +14,19 @@ html, body{
     background-color: white;
 }
 #nav{
-    height: 100px;
+    height: 1vh;
     width: 100%;
     /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 40px;
+    padding: 5vh 1vw;
 }
 #nav-part1{
     display: flex;
     align-items:center;
     justify-content: center;
-    gap: 4px;
+    gap: 1vw;
 }
 
 #nav h3{
@@ -61,7 +61,7 @@ html, body{
     font-size: 16px;
     border-radius: 50px;
     border:1.5px solid #000;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* designing the  sign up button */
@@ -124,4 +124,47 @@ img{
     bottom: 5%;
     left:3%;
     font-size: 20px;
+}
+
+
+@media screen and (orientation: portrait) {
+    .pnchline{
+        font-size: 60px;
+        padding: 0 10px;
+    }
+    img{
+        height: 250px;
+        width: 200px;
+    }
+    #btm-left{
+        font-size: 16px;
+    }  
+}
+@media  (width<=400), screen and (orientation: portrait) {
+    .pnchline{
+        font-size: 40px;
+        padding: 0 10px;
+    }
+    img{
+        height: 250px;
+        width: 200px;
+    }
+    #btm-left{
+        font-size: 16px;
+    }  
+    #nav-part2 h1{
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1px;   
+    }
+    #nav-part2{
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav-part1, #nav-part3 {
+        display: none;
+    }
+
 }
