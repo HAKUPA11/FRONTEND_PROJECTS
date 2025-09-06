@@ -590,14 +590,76 @@ button{
     width:20%;
     background-color: #161A20;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
 }
+#line1_card1 img{
+    height: 30%;
+    width: 100%;
+    margin: 9% 0 0 9%;
+    background-color: #eb8a8a;
+}
+#line1_card1 h2{
+    height: 25%;
+    width: 100%;
+    color: #0c54e3;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #f7cccc;
+    margin-left:9%;
+}
+#line1_card1 p{
+    height: 45%;
+    width: 100%;
+    color:#cf7a25;
+    text-align: center;
+    margin-top: 1%;
+    font-weight: 500;
+    background-color: #360303;
+    margin-left:9%;
+}
+
+
+
 #line1_card2{
     height: 80%;
     width:20%;
     background-color: #1f2226;
     margin-top: 4%;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
 }
+#line1_card2 img{
+    height: 30%;
+    width: 100%;
+    margin: 9% 0 0 9%;
+    background-color: #eb8a8a;
+}
+#line1_card2 h2{
+    height: 25%;
+    width: 100%;
+    color: #0c54e3;
+    text-align: center;
+    margin-top: 3%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #f7cccc;
+    margin-left:9%;
+}
+#line1_card2 p{
+    height: 45%;
+    width: 100%;
+    color:#cf7a25;
+    text-align: center;
+    margin-top: 1%;
+    font-weight: 500;
+    background-color: #360303;
+    margin-left:9%;
+}
+
 #line1_card3{
     height: 80%;
     width:20%;
