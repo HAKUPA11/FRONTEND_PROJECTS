@@ -1,1 +1,1 @@
-PROJECT LINK FOR DENTYTECH- https://dentytechhakupa11.netlify.app/
+PROJECT LINK FOR DENTYTECH- https://dentytechhakupap111.netlify.app/
