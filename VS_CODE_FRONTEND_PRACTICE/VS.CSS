@@ -483,33 +483,52 @@ button{
 /* C O D E - A N Y W H E R E */
 
 #code-anywhere{
-    display: flex;
-    height: 70%;
+    height: 80%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 0 80px 0 80px;
+    gap: 5%;
 }
-
 #anywhere-written{
     height: 100%;
-    width: 70%;
-    background-color: #fff;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
 }
 #anywhere-img{
-    height: 100%;
-    width: 100%;
-    background-color: #73ff00;
-   
+    height:80%;
+    width:70% ;
+    /* background-color: #fff; */
+    margin-bottom: 7%;
 }
 #anywhere-img img{
-    height: 85%;
-    width: 50%;
-}
-
-/* R I C H   F E A T U R E S */
-#ric-features{
     height: 100%;
     width: 100%;
 }
-
+.agent_card{
+    height: 70%;
+    width: 40%;
+    color: #aabbdf;
+}
+#anywhere-written h1{
+    font-size: 28px;
+    font-weight: 500;
+    color: #c4d6fd;
+}
+#anywhere-written h3{
+    font-size: medium;
+    color:#aabbdf;
+    font-weight: 400;
+}
+#anywhere-written a{
+    color: #39a6ff;
+    font-size: medium;
+    font-weight: 400;
+}
 
 
 /* E N D   D I V */
@@ -544,6 +563,9 @@ button{
     font-size: 15px;
     font-weight: 100;
 }
+
+
+/* C O D E   W I T H   R I C H   F E A T U R E S   S E C T I O N */
 
 #rich-features h1{
     color: #a4bbe8;
