@@ -1,0 +1,590 @@
+.sevillana-regular {
+    font-family: "Sevillana", cursive;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;/* we always start by making a div called main sara website isei ke andar aayega*/
+    width: 100%;
+    /* background-color: blue; */
+    position: relative; /*position relative isliye diya taaki aagey hum koi bhi div create karengay toh woh iss main div ke respect mei sarei elements kaam karengay*/
+    padding-top: 0.1px;/*read line 31, 32, 33*/
+}
+/*there is a bug in css by default*/
+#nav{
+    height: 12vh;
+    width: 100%;
+    background-color: white;
+    margin-top: 40px;   /* the moment i gave margin top it will leave a space of 50pc from top
+    but also it will shift its parent element tbhat was main 50px thus to 
+    solve this issue / bug  we just to have to give a very small padding to main div*/
+    border-top:  2px solid black;
+    border-bottom:  2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*jp text wala box wo center hua hai refer line 40*/
+    /* font-family: "Sevillana", cursive; */
+}
+
+#nav h2 {
+    /* background-color: aqua; taaki mujhei h2 ka scope dikh paye  */
+    height: 100%; /*apne div ka 100% height occupy karega */
+    width: 23.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /*taaki jo text hai wo center mei aa jay
+    e isliye line no.38, 39, 40 ka use kiya hai*/ 
+    font-size: 20px;
+    font-weight: 600;
+    border-right: 2px solid black;
+    /* letter-spacing: -0.8vh; */
+
+}
+
+#nav h1 {
+    /* background-color: aqua; taaki mujhei h2 ka scope dikh paye  */
+    height: 100%; 
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: 7vh ;
+    letter-spacing: -0.8vh;/*to make the letters chipak chipak ke*/
+    /* border-left: 2px solid black; */
+    font-weight: 900;
+}
+
+#nav h2:nth-last-child(1){/*https://css-tricks.com/almanac/selectors/n/nth-child/*/
+width: 10%;
+/* background-color: red; */
+}
+
+#center{
+    height: 90vh;
+    width: 100%;
+    /* background-color: red; */
+    padding: 4.2vw;
+    position: relative;
+}
+
+.content{
+    height: 110%;
+    width: 100%;
+    /* background-color: blue; */
+    position: relative;
+}
+
+.content video{
+    height: 100%;
+    width: 100%; /* to make it fit inside the given div i will use line 90*/
+    object-fit: cover;
+}
+
+#overlay{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;/*to start it from bottom of the div*/
+    /* background-color: red; */
+    padding: 3vw;
+    color: #fff;/* to make the text color white which inside overlay div*/
+    /* backdrop-filter: blur(10px) ; */
+
+}
+
+.over1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 0.5vh;
+    font-size: 4vh;
+    font-family: "Sevillana", cursive;
+    font-weight: bolder;
+}
+
+
+
+.over2 h4{
+    margin-top: 5px;/*photography and films wali line se gap chahiye tha isliye
+    margin use kiya , margin is for outside the div and padding is for inside*/
+    font-size: 1.7vw;
+   
+   
+}
+
+.over2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding: 7px;
+    /* backdrop-filter: blur(10px); */
+    font-family: "Sevillana", cursive;
+    font-weight: 900;
+}
+
+.over2 h3{
+    font-size: 4.5vw;
+}
+
+#scroll{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    /* padding: 1vw; */
+    white-space: nowrap;/*scroll div parent div hai dono hi container divs ka
+    isliye ye property parent div pe lagti hai
+    issei jo do container div thei wo same line horizontally aa jayemngay*/
+
+    /*even then hamara poora page scroll hoga horizontally to fix it we use 👇*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+#scroll img{
+    height: 105%;
+    /* display: none; */
+    border-radius: 50%;
+    width: 15%;
+    object-fit: cover;
+    object-position: 50% 10%;
+    margin: 1vw;
+}
+
+#container{
+    height: 100%;  /*container div scroll div ke ndar hai*/
+    width: 110%;
+    /* width: fit-content;kyonki jab 100% diya tha toh jo images hai wo overlap kar rhi thi */
+    /* background-color: blue; */
+    display: inline-block;/*aapka jitna size hai rakho baaki ka agli line mei bhej do*/
+    padding: 2vw;
+    animation-name: anime1;
+    animation-duration: 19s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#alphabet{
+    height: 12vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 4vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#alphabet h5{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-family: "Sevillana", cursive;
+    letter-spacing: 0.3vh;
+    border-bottom: 2px solid #000;
+    font-style: italic;
+}
+
+#alphabet h6{
+    font-size: 1vw;
+    text-transform: uppercase;
+    /* font-family: "Sevillana", cursive; */
+    /* letter-spacing: 0.5vh; */
+    /* border-bottom: 2px solid #000; */
+    font-style: italic;
+    padding: 0.5vw 0.7vw;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);    /*ispe maine transparent kardiya */
+    cursor: pointer;
+    transition: all ease 0.3s;/*CSS transitions allows you to change 
+    property values smoothly, over a given duration.*/
+    
+}
+
+#alphabet h6:hover{
+    border: 1px solid black;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2-part1{
+    height: 100%;
+    width: 60%;
+    /* background-image: url(); */
+   
+    background-repeat: no-repeat;
+    
+    margin-top: 10vh;
+    margin-left: 5vw;
+    /* background-color: red; */
+
+}
+
+.page2-part1 img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    box-shadow: 5px 8px 10px;/*this property is used to back the shadow effect
+     5px determines the right side
+     8px determines the bottom side and
+     10px determines how mush is the depth of shadow*/
+    
+    
+}
+
+
+.page2-part1 h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    margin-top: 3vh ;
+    font-size: 3vw;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    letter-spacing: 0.2 vw;
+    font-weight: 600;
+
+}
+
+
+
+.page2-part2{
+    height: 100%;
+    width: 40%;
+    /* background-image: url(https://images.unsplash.com/photo-1541779343-66b948e68da0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjk4fHxtYWxlfGVufDB8fDB8fHww); */
+   
+  
+    /* margin-top: 0.1vh; */
+    /* background-color: blue; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 10vh;
+
+}
+
+.page2-part2 img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    box-shadow: 5px 8px 10px;
+}
+
+.page2-part2 h5{
+    font-size: 1.6vw;
+    /* letter-spacing: 0.2vw; */
+    margin-top: 3.5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#page3-part1 img{
+    margin-left: 10vw;
+    /* background-color: blue; */
+    height: 30vh;
+    width: 20vw;
+}
+#page3-part1 h3{
+    font-size: 2rem;
+    padding-top: 5vh;
+    margin-left: 5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+#page3-part1 i{
+    padding-left:16.5vw ;
+    padding-top:6.5vh;
+    font-size: 8vw;
+    position: absolute;
+
+}
+
+#page3-part2 img {
+    margin-right: 5vw;
+    margin-left: 5vw;
+    /* background-color: red; */
+    height: 70vh;
+    width: 50vw;
+    object-fit: cover;
+    object-position: 50% 50%;
+    box-shadow: 5px 8px 10px;
+}
+
+#page4{
+    height: 80%;
+    width: 100%;
+    /* background-color: blue; */
+    padding: 0 5vw 0 5vw;
+}
+#page4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+   
+    /* box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18); */
+   
+}
+
+#page4 i{
+    font-size: 5vw;
+    position: absolute;
+    color: whitesmoke;
+   padding: 35.5vh 0 0 82vw;
+}
+
+/* #page4 i:hover{
+   color: aqua;
+} */
+ #page5{
+    height: 100%;
+    width: 100%;
+ }
+ #updates {
+    margin-top: 9vh;
+    margin-bottom: 5vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+ }
+
+ #div1{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vh;
+    margin: 0 5vw 0 5vw;
+    border-top: 2px solid rgb(48, 48, 48);
+ }
+ #div1 img{
+    border-radius: 50%;
+    height: 18vh;
+    width: 11vw;
+    object-fit: cover;
+    object-position: 100% 10%;
+    position: relative;
+    left: -10%;
+    opacity: 0;
+    transition: all ease 0.6s;
+ }
+ #div1 h3{
+    font-size: 1.4rem;
+ }
+ #div1 h2{
+    font-size: 2.3rem;
+ }
+ #div1:hover img{
+    left: 0%;
+    opacity: 1;
+ }
+ #div1:hover{
+    background-color:  #ebebeb;
+ }
+
+
+
+ #div2{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20vh;
+    margin: 0 5vw 0 5vw;
+    border-top: 2px solid rgb(48, 48, 48);
+ }
+ #div2 img{
+    border-radius: 50%;
+    height: 18vh;
+    width: 11vw;
+    object-fit: cover;
+    object-position: 50% 15%;
+    position: relative;
+    left: 10%;
+    opacity: 0;
+    transition: all ease 0.6s;
+ }
+ #div2 h3{
+    font-size: 1.4rem;
+ }
+ #div2 h2{
+    font-size: 2.3rem;
+    margin-right: 8vw;
+ }
+ #div2:hover img{
+    left: 0%;
+    opacity: 1;
+ }
+ #div2:hover{
+    background-color:  #ebebeb;
+ }
+
+
+
+ #div3{
+    /* background-color: greenyellow; */
+    height: 20vh;
+    align-items: center;
+    margin: 0 5vw 0 5vw;
+    border-top: 2px solid rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+ #div3 h3{
+    margin-left: 1.5vw;
+    font-size: 1.4rem;
+ }
+ #div3 h2{
+    font-size: 2.3rem;
+    
+ }
+ #div3 img{
+    border-radius: 50%;
+    height: 18vh;
+    width: 11vw;
+    object-fit: cover;
+    object-position: 100% 25%;
+    margin-left: 2.8vw;
+    position: relative;
+    left: -10%;
+    opacity: 0;
+    transition: all ease 0.6s;
+
+}
+#div3:hover img{
+    left: 0%;
+    opacity: 1;
+ }
+ #div3:hover{
+    background-color:  #ebebeb;
+ }
+
+ 
+
+
+ #div4{
+    /* background-color: orange; */
+    height: 20vh;
+    align-items: center;
+    margin: 0 5vw 0 5vw;
+    border-top: 2px solid rgb(48, 48, 48);
+    border-bottom: 2px solid rgb(48, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+ }
+ #div4 h3{
+    font-size: 1.4rem;
+ }#div4 h2{
+    font-size: 2.3rem;
+    margin-right: 6.8vw;
+ }
+ #div4 img{
+    border-radius: 50%;
+    height: 18vh;
+    width: 11vw;
+    object-fit: cover;
+    object-position: 90% 30%;
+    margin-right: 3vw;
+    position: relative;
+    left: 10%;
+    opacity: 0;
+    transition: all ease 0.6s;
+ }
+
+ #div4:hover img{
+    left: 0%;
+    opacity: 1;
+ }
+ #div4:hover{
+    background-color: #ebebeb;
+ }
+
+#footer{
+    height: 100%;
+    width: 100%;
+}
+
+#marque{
+    margin-top: 5vh;
+    /* background-color: red; */
+    height: 16vh;
+    white-space: nowrap;/*sare el line mei aa jayengay premier model 2024*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#marque h1{
+    display: inline-block;/*jo h1 vertivally aa rhei thei ab horizontally aayemgay sab*/
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    -webkit-text-stroke: 2px black;/*new property*/
+    color: transparent;
+    letter-spacing: 0.3vw;
+    font-size: 3rem;
+    padding: 3vh 0 2vh 0;
+    margin-right: 2vw;
+    animation: movy;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes movy {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 4px - 2vw));
+    }
+}
+/*one thing to remmeber by default 4px ka gap hota hai
+       also usmei mene margin right diya hai 2vw ka isiliye
+        -100 se 4px aur 2vw minus kar rahe hai taaki anmation
+        lag na ho after single iteration */
