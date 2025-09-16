@@ -1,0 +1,34 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    /* background-image: url(dark-gaming-jdc7028bqa3g20q3.jpg);
+    background-position: center;
+    background-size: cover; 
+    position: relative; */
+    background-color: #000000;
+}
+
+#box{
+    display: flex;
+    background-color: red;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.falling-comet {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  pointer-events: none;
+}

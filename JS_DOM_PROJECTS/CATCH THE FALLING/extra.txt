@@ -1,0 +1,35 @@
+
+// function createFallingComet() {
+//   const comet = document.createElement('img');
+  
+//   // Randomly select a comet image from array
+//   const randomIndex = Math.floor(Math.random() * cometImages.length);
+//   comet.src = cometImages[randomIndex];
+  
+//   comet.classList.add('falling-comet');
+
+//   const maxX = gameContainer.clientWidth - 40; // 40 = comet width
+//   comet.style.left = Math.random() * maxX + 'px';
+//   comet.style.top = '0px';
+
+//   gameContainer.appendChild(comet);
+//   fallingComets.push(comet);
+// }
+
+// function animateComets() {
+//   fallingComets.forEach((comet, index) => {
+//     let top = parseFloat(comet.style.top);
+//     comet.style.top = (top + 3) + 'px'; // move down by 3px per frame
+
+//     // If comet is outside the viewport, remove it
+//     if (top > gameContainer.clientHeight) {
+//       comet.remove();
+//       fallingComets.splice(index, 1);
+//     }
+//   });
+
+//   requestAnimationFrame(animateComets);
+// }
+
+// requestAnimationFrame(animateComets);
+// setInterval(createFallingComet, 1500);
