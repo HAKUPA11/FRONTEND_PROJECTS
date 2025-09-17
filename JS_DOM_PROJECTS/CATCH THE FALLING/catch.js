@@ -3,6 +3,11 @@ const cometImages=[
     "comet2.png",
     "comet3.png", 
     "comet4.png", 
+    "comet5.png", 
+    "comet6.png", 
+    "comet7.png", 
+    "comet8.png", 
+    "comet9.png" 
 ];  
 
 
