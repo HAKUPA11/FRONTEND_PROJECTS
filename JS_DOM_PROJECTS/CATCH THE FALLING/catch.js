@@ -10,11 +10,22 @@ const cometImages=[
     "comet9.png" 
 ];  
 
+let score=0;
+
 function fall(comet) {
   let top = 0;
+
   function animate() {
     top += 2; // speed
     comet.style.top = top + 'px';
+
+    if(checkCollision(comet, box)) {
+      comet.remove();
+      score += 1;
+      document.getElementById("num").textContent =score;
+      return; // Stop animation, comet is caught
+    }
+
     if (top < window.innerHeight) {
       requestAnimationFrame(animate);
     } else {
@@ -38,7 +49,7 @@ function create_and_fall(){
     fall(comet);
 }
 
-setInterval(create_and_fall, 500);
+setInterval(create_and_fall, 1000);
 
 // making thr box controls
 
@@ -58,3 +69,15 @@ document.addEventListener("keydown", function(e){
   box.style.left=left+"px";
 
 })
+
+//making the collision logic 
+function checkCollision(comet,box) {
+    const cometRect = comet.getBoundingClientRect();
+    const playerRect = box.getBoundingClientRect();
+    return !(
+        cometRect.bottom < playerRect.top ||
+        cometRect.top > playerRect.bottom ||
+        cometRect.right < playerRect.left ||
+        cometRect.left > playerRect.right
+    );
+}

@@ -48,5 +48,7 @@ body{
 /* score */
 h1{
   color: white;
+  /* position: fixed; */
+  font-size: 56px;
   font-family: "audiowide";
 }
