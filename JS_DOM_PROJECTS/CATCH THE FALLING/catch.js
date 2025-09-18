@@ -10,28 +10,6 @@ const cometImages=[
     "comet9.png" 
 ];  
 
-
- 
-// let comet = cometImages[Math.floor(Math.random()*cometImages.length)];;
-// document.querySelector("button").addEventListener("click",function(){
-//     const img = document.createElement("img");
-//     img.src = comet;
-//     img.style.width = "40px";
-//     img.style.height= "60px";
-//     document.getElementById("falling-object").appendChild(img);
-// })
-
-
-// const img = document.createElement("img")
-// img.src=cometImages[Math.floor(Math.random()*cometImages.length)];
-// img.classList.add('comet');
-// img.style.position = 'absolute';
-// img.style.left=Math.random()*(window.innerWidth-64)+"px";
-// img.style.top = '0px';
-// let comet=img;
-// document.body.appendChild(comet);
-
-
 function fall(comet) {
   let top = 0;
   function animate() {
@@ -61,3 +39,22 @@ function create_and_fall(){
 }
 
 setInterval(create_and_fall, 500);
+
+// making thr box controls
+
+const box=document.querySelector("img");
+box.style.position="relative";
+box.style.left = (window.innerWidth / 2 - box.offsetWidth / 2) + "px";// to make the box initially centered
+document.addEventListener("keydown", function(e){
+  const step=100;
+  let left=box.offsetLeft;
+
+  if (e.key==="ArrowLeft"){
+    left=Math.min(window.innerWidth-box.offsetWidth, left-step);
+  }else if(e.key==="ArrowRight"){
+    left=Math.min(window.innerWidth-box.offsetWidth, left+step);
+  }
+
+  box.style.left=left+"px";
+
+})

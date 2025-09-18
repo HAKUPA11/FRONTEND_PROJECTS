@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 *{
     padding:0;
     margin:0;
@@ -10,21 +12,24 @@ html, body{
 }
 
 body{
-    /* background-image: url(dark-gaming-jdc7028bqa3g20q3.jpg);
+    background-image: url(backgriund_space.jpg);
     background-position: center;
     background-size: cover; 
-    position: relative; */
+    position: relative;
     background-color: #000000;
 }
 
 #box{
     display: flex;
     /* background-color: red; */
-    height: 30%;
+    height: 20%;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
+#box img{
+  bottom: 0;
+} 
 
 .falling-comet {
   position: absolute;
@@ -38,4 +43,10 @@ body{
   pointer-events: none;
   height: 60px;
   width: 40px;
+}
+
+/* score */
+h1{
+  color: white;
+  font-family: "audiowide";
 }
