@@ -21,7 +21,6 @@ body{
 
 #box{
     display: flex;
-    /* background-color: red; */
     height: 20%;
     position: absolute;
     bottom: 0;
@@ -48,7 +47,11 @@ body{
 /* score */
 h1{
   color: white;
-  /* position: fixed; */
   font-size: 56px;
   font-family: "audiowide";
+}
+/*  */
+
+#lives{
+display: flex;
 }

@@ -16,7 +16,7 @@ function fall(comet) {
   let top = 0;
 
   function animate() {
-    top += 2; // speed
+    top += 5; // speed
     comet.style.top = top + 'px';
 
     if(checkCollision(comet, box)) {
@@ -30,6 +30,7 @@ function fall(comet) {
       requestAnimationFrame(animate);
     } else {
       comet.remove();
+      loseLife();
     }
   }
   animate();
@@ -81,3 +82,43 @@ function checkCollision(comet,box) {
         cometRect.left > playerRect.right
     );
 }
+
+// lives:
+let lives = 5;
+
+const live0=document.getElementById("live0");
+const live1=document.getElementById("live1");
+const live2=document.getElementById("live2");
+const live3=document.getElementById("live3");
+const live4=document.getElementById("live4");
+const arr_lives=[live0, live1, live2, live3, live4]
+
+function loseLife() {
+  lives--;
+ console.log(lives);
+  updateLivesDisplay(lives); // You can define this to update hearts visually
+
+  if (lives <= 0) {
+    setTimeout(()=>{
+      gameOver();
+    }, 50)
+    
+  }
+}
+
+function updateLivesDisplay(lives) {
+  if (lives >= 0) {
+    arr_lives[lives].style.visibility = "hidden";
+  }
+}
+
+
+
+function gameOver() {
+  alert(`Game Over! \nYou lost all your lives. \n YOU! FILTHY PIECE OF FLESH !!.\nYour current score is: ${score}\n( ︶︿︶)_╭∩╮  RUKKOOOO  ZARA\nDo you want to play again?`);
+  
+  if (confirm("Sahi mei khelogey? \n PLACEMENT SEASON NEARBY, AUR TERI SKILLS = ADHD + Autism𓆈  \n 😶‍🌫️ \n")) {
+    location.reload(); // simple page reload 
+  }
+}
+
