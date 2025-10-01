@@ -417,13 +417,28 @@ button{
 #language{
     height: 65%;
     width: 100%;
-    /* background-color: #ffbb00; */
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px 0 80px;
+    height: 70vh;
+    width: 100%;
+    gap: 5%;
 }
 #lang-written{
+    padding-top:50px ;
     height: 100%;
     width: 40%;
     /* background-color: #e78b8b; */
+}
+#lang-written h1{
+    font-size: 28px;
+    font-weight: 500;
+    color: #c4d6fd;
+}
+#lang-written p{
+    color: #aabbdf;
+    padding: 10px 0 8px 0;
 }
 #lang{
     height:100%;
